@@ -1,5 +1,23 @@
+.splash { 
+    color: white;
+    position: relative;
+}
+
 .splashImage { 
     width: 100%;
-    height: 500px;
+    height: 600px;
     object-fit: cover; 
+    position: relative;
+}
+
+.splashDesc { 
+    position: absolute;
+    bottom: 25%;
+    right: 15%;
+}
+
+.splashDesc p { 
+    font-size: 2.5em;
+    font-weight: 400;
+    margin-bottom: 15px;
 }

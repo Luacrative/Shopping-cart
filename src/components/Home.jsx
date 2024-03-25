@@ -6,6 +6,10 @@ const Home = () => {
         <>
             <header className={styles.splash}>
                 <img className={styles.splashImage} src={homeSplash} />
+                <div className={styles.splashDesc}>
+                    <p>Where style meets comfort</p>
+                    <button className="standardButton">Shop now</button>
+                </div>
             </header>
         </>
     )

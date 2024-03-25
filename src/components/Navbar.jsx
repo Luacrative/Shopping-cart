@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <nav className={styles.bar}>
             <div className={styles.left}>
-                <h1 className={styles.logo}>Home Store</h1>
+                <h1 className={styles.logo}>Home store</h1>
             </div>
             <div className={styles.right}>
                 <img className={styles.icon} src={searchImage} />
