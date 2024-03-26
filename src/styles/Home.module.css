@@ -21,3 +21,19 @@
     font-weight: 400;
     margin-bottom: 15px;
 }
+
+.featured { 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.featured h1 { 
+    text-transform: uppercase;
+}
+
+.items { 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
