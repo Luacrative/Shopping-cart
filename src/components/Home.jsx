@@ -7,9 +7,9 @@ const Home = () => {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        setLoading(true);
-
         const fetchItems = async () => {
+            setLoading(true);
+
             const fetchedItems = [];
 
             for (let i = 1; i <= 4; i++) {
@@ -40,11 +40,13 @@ const Home = () => {
                 <h1>Featured items</h1>
 
                 {loading && <h2>Loading items</h2>}
-                
+
                 <div className={styles.items}>
                     {items.map((item, index) => (
-                        <div key={index}>
-                            <p>{item.title}</p>
+                        <div className={styles.item} key={index}>
+                            <img className={styles.itemImage} src={item.image} alt="" />
+                            <p className={styles.itemTitle}>{item.title}</p>
+                            <p className={styles.itemPrice}>${item.price}</p>
                         </div>
                     ))}
                 </div>

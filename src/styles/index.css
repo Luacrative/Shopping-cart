@@ -12,12 +12,11 @@
     font-weight: 600;
     text-transform: capitalize;
 
-    transition: transform 0.2s;
-    transform: scale(1);
+    transition: scale 0.2s;
 }
 
 .standardButton:hover { 
     cursor: pointer;
     border-radius: 5px;
-    transform: scale(1.1);
+    scale: 1.1;
 }
