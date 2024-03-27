@@ -11,6 +11,10 @@
     position: fixed;
 }
 
+.redirect { 
+    all: unset;
+}
+
 .left { 
     margin-left: 20px;
 }

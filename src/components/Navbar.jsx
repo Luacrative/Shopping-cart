@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "../styles/Navbar.module.css"
 import cartImage from "../assets/cart.png"
 import searchImage from "../assets/search.png"
@@ -6,7 +7,9 @@ const Navbar = () => {
     return (
         <nav className={styles.bar}>
             <div className={styles.left}>
-                <h1 className={styles.logo}>Home store</h1>
+                <Link className={styles.redirect} to="/">
+                    <h1 className={styles.logo}>Home store</h1>
+                </Link>
             </div>
             <div className={styles.right}>
                 <img className={styles.icon} src={searchImage} />
