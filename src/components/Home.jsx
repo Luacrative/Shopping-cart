@@ -1,30 +1,10 @@
 import { useState, useEffect } from "react"
 import styles from "../styles/Home.module.css"
 import homeSplash from "../assets/home_splash.jpg"
+import getItems from "../hooks/getItems.jsx"
 
 const Home = () => {
-    const [items, setItems] = useState([]);
-    const [loading, setLoading] = useState(false);
-
-    useEffect(() => {
-        const fetchItems = async () => {
-            setLoading(true);
-
-            const fetchedItems = [];
-
-            for (let i = 1; i <= 4; i++) {
-                const response = await fetch(`https://fakestoreapi.com/products/${i}`)
-                const json = await response.json();
-
-                fetchedItems.push(json);
-            }
-
-            setItems(fetchedItems);
-            setLoading(false);
-        };
-
-        fetchItems();
-    }, []);
+    const { items, loading } = getItems(4);
 
     return (
         <>
