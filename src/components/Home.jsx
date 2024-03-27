@@ -25,10 +25,10 @@ const Home = () => {
 
                 <div className={styles.items}>
                     {items.map((item, index) => (
-                        <div className={styles.item} key={index}>
-                            <img className={styles.itemImage} src={item.image} alt="" />
-                            <p className={styles.itemTitle}>{item.title}</p>
-                            <p className={styles.itemPrice}>${item.price}</p>
+                        <div className="item" key={index}>
+                            <img className="itemImage" src={item.image} alt="" />
+                            <p className="itemTitle">{item.title}</p>
+                            <p className="itemPrice">${item.price}</p>
                         </div>
                     ))}
                 </div>

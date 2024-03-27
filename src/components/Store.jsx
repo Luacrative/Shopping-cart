@@ -6,7 +6,17 @@ const Store = () => {
 
     return (
         <main className={styles.storeMain}>
-            <h1>Store page</h1>
+            {loading && <h2>Loading items</h2>}
+
+            <div className={styles.items}>
+                {items.map((item, index) => (
+                    <div className="item" key={index}>
+                        <img className="itemImage" src={item.image} alt="" />
+                        <p className="itemTitle">{item.title}</p>
+                        <p className="itemPrice">${item.price}</p>
+                    </div>
+                ))}
+            </div>
         </main>
     )
 };

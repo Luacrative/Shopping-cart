@@ -1,4 +1,45 @@
-body { 
-    margin: 0 auto;
-    height: 100vh;
+.standardButton {
+    background-color: rgb(0, 105, 204);
+    color: white;
+    border: 0px;
+    padding: 10px 30px;
+    border-radius: 7px;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: capitalize;
+
+    transition: scale 0.2s;
+}
+
+.standardButton:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    scale: 1.1;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 250px;
+
+    transition: scale 0.2s;
+}
+
+.item:hover { 
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.itemImage {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+
+.item p {
+    font-size: 1.2em;
+}
+
+.itemTitle {
+    font-weight: 600;
 }

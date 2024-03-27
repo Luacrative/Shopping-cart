@@ -38,31 +38,3 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 50px;
 }
-
-.item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 250px;
-
-    transition: scale 0.2s;
-}
-
-.item:hover { 
-    cursor: pointer;
-    scale: 1.1;
-}
-
-.itemImage {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: contain;
-}
-
-.item p {
-    font-size: 1.2em;
-}
-
-.itemTitle {
-    font-weight: 600;
-}
