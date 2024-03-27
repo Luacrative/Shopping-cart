@@ -15,6 +15,10 @@
     all: unset;
 }
 
+.redirect:hover { 
+    cursor: pointer;
+}
+
 .left { 
     margin-left: 20px;
 }
