@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react"
+import { Link } from "react-router-dom";
+import getItems from "../hooks/getItems.jsx"
 import styles from "../styles/Home.module.css"
 import homeSplash from "../assets/home_splash.jpg"
-import getItems from "../hooks/getItems.jsx"
 
 const Home = () => {
     const { items, loading } = getItems(4);
@@ -12,7 +12,9 @@ const Home = () => {
                 <img className={styles.splashImage} src={homeSplash} />
                 <div className={styles.splashDesc}>
                     <p>Where style meets comfort</p>
-                    <button className="standardButton">Shop now</button>
+                    <Link to="/store">
+                        <button className="standardButton">Shop now</button>
+                    </Link>
                 </div>
             </header>
 

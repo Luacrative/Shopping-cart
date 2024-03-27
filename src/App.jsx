@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./components/Home.jsx"
 import Navbar from "./components/Navbar.jsx"
+import Home from "./components/Home.jsx"
+import Store from "./components/Store.jsx"
 import "./styles/App.css"
 
 const router = createBrowserRouter([
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
     {
         path: "/Home",
         element: <Home />
+    },
+    {
+        path: "/Store",
+        element: <Store />
     }
 ]);
 
