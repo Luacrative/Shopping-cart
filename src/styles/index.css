@@ -14,3 +14,16 @@ a {
 a:hover { 
     cursor: pointer;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    appearance: textfield;
+}
+
+button:hover {
+    cursor: pointer;
+}

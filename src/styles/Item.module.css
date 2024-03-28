@@ -1,4 +1,4 @@
-.container { 
+.item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,21 +9,59 @@
     transform: translate(-50%, -50%);
 }
 
-.itemImage { 
+.itemImage {
     width: 400px;
     aspect-ratio: 1;
     object-fit: contain;
 }
 
-.itemPrice { 
+.itemPrice {
     font-size: 1.4em;
 }
 
-.itemDesc { 
+.itemDesc {
     font-size: 1em;
 }
 
-p, h2 { 
+.itemControls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.itemControlsQuantity {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.itemQuantityInput {
+    width: 70px;
+    height: 30px;
+    font-size: 1em;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.itemQuantityInput:focus {
+    border-color: rgb(0, 105, 204);
+}
+
+.transparentButton {
+    background: none;
+    border: none;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+p,
+h2 {
     margin-top: 5px;
     margin-bottom: 7px;
+}
+
+hr {
+    margin-bottom: 15;
 }
