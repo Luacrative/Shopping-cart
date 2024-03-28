@@ -16,6 +16,7 @@
     border-radius: 5px;
     scale: 1.1;
 }
+
 .item {
     display: flex;
     flex-direction: column;
