@@ -2,12 +2,9 @@ import { useState, useEffect } from "react"
 
 const getItems = itemCount => {
     const [items, setItems] = useState([]);
-    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         const fetchItems = async () => {
-            setLoading(true);
-
             const fetchedItems = [];
 
             for (let i = 1; i <= itemCount; i++) {
@@ -18,13 +15,12 @@ const getItems = itemCount => {
             }
 
             setItems(fetchedItems);
-            setLoading(false);
         };
 
         fetchItems();
     }, []);
 
-    return { items, loading };
+    return items;
 };
 
 export default getItems; 

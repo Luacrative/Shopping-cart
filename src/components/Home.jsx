@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css"
 import homeSplash from "../assets/home_splash.jpg"
 
 const Home = () => {
-    const { items, loading } = getItems(4);
+    const items = getItems(4);
 
     return (
         <>
@@ -21,7 +21,7 @@ const Home = () => {
             <main className={styles.featured}>
                 <h1>Featured items</h1>
 
-                {loading && <h2>Loading items</h2>}
+                {items.length === 0 && <h2>Loading items</h2>}
 
                 <div className={styles.items}>
                     {items.map((item, index) => (

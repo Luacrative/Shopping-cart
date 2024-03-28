@@ -2,11 +2,11 @@ import getItems from "../hooks/getItems.jsx"
 import styles from "../styles/Store.module.css"
 
 const Store = () => {
-    const { items, loading } = getItems(10);
+    const items = getItems(10);
 
     return (
         <main className={styles.storeMain}>
-            {loading && <h2>Loading items</h2>}
+            {items.length === 0 && <h2>Loading items</h2>}
 
             <div className={styles.items}>
                 {items.map((item, index) => (
