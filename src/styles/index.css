@@ -6,3 +6,11 @@ body {
     margin: 0 auto;
     height: 100vh;
 }
+
+a { 
+    all: unset;
+}
+
+a:hover { 
+    cursor: pointer;
+}

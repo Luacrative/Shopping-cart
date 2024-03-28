@@ -5,7 +5,7 @@ import searchImage from "../assets/search.png"
 
 const Navbar = () => {
     const location = useLocation();
-    const background = location.pathname === "/store" ? styles.opaqueBar : styles.transparentBar;
+    const background = location.pathname === "/" ? styles.transparentBar : styles.opaqueBar;
 
     return (
         <nav className={`${styles.bar} ${background}`}>

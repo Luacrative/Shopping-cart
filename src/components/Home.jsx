@@ -3,7 +3,7 @@ import getItems from "../hooks/getItems.jsx"
 import styles from "../styles/Home.module.css"
 import homeSplash from "../assets/home_splash.jpg"
 
-const Home = () => {
+const Home = ({ setCurItem }) => {
     const items = getItems(4);
 
     return (
@@ -26,9 +26,11 @@ const Home = () => {
                 <div className={styles.items}>
                     {items.map((item, index) => (
                         <div className="item" key={index}>
-                            <img className="itemImage" src={item.image} alt="" />
-                            <p className="itemTitle">{item.title}</p>
-                            <p className="itemPrice">${item.price}</p>
+                            <Link to="/item" onClick={() => setCurItem(item)}>
+                                <img className="itemImage" src={item.image} alt="" />
+                                <p className="itemTitle">{item.title}</p>
+                                <p className="itemPrice">${item.price}</p>
+                            </Link>
                         </div>
                     ))}
                 </div>

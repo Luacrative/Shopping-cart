@@ -19,14 +19,6 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.redirect {
-    all: unset;
-}
-
-.redirect:hover {
-    cursor: pointer;
-}
-
 .left {
     margin-left: 20px;
 }
