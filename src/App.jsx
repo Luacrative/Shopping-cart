@@ -8,11 +8,12 @@ import "./styles/App.css"
 
 function App() {
     const [curItem, setCurItem] = useState({});
+    const [cart, setCart] = useState([]);
 
     return (
         <>
             <Router>
-                <Navbar />
+                <Navbar cart={cart} />
                 <Routes>
                     <Route exact path="/" element={<Home setCurItem={setCurItem} />} />
                     <Route path="/store" element={<Store setCurItem={setCurItem} />} />

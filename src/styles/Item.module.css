@@ -46,7 +46,7 @@
 }
 
 .itemQuantityInput:focus {
-    border-color: rgb(0, 105, 204);
+    border-color: var(--blue-color);
 }
 
 .transparentButton {

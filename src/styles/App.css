@@ -1,5 +1,9 @@
+:root { 
+    --blue-color: rgb(0, 105, 204);
+}
+
 .standardButton {
-    background-color: rgb(0, 105, 204);
+    background-color: var(--blue-color);
     color: white;
     border: 0px;
     padding: 10px 30px;

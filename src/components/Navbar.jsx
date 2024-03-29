@@ -3,7 +3,7 @@ import styles from "../styles/Navbar.module.css"
 import cartImage from "../assets/cart.png"
 import searchImage from "../assets/search.png"
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
     const location = useLocation();
     const background = location.pathname === "/" ? styles.transparentBar : styles.opaqueBar;
 
@@ -16,7 +16,12 @@ const Navbar = () => {
             </div>
             <div className={styles.right}>
                 <img className={styles.icon} src={searchImage} />
-                <img className={styles.icon} src={cartImage} />
+                <div className={styles.cart}>
+                    <img className={styles.icon} src={cartImage} />
+                    {cart.length > 0 &&
+                        <p className={styles.cartQuantity}>{cart.length}</p>
+                    }
+                </div>
             </div>
         </nav>
     )
