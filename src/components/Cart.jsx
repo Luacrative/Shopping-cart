@@ -14,7 +14,7 @@ const CartEmpty = () => {
 };
 
 const CartItems = ({ items, setCart }) => {
-    const totalCost = items.reduce((total, item) => total + item.price, 0).toFixed(2);
+    const totalCost = items.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2);
 
     const decrementQuantity = item => {
         if (item.quantity > 0) {
