@@ -4,14 +4,16 @@
     align-items: center;
     flex-direction: column;
     gap: 25px;
-    position: absolute;
-    margin-top: 100px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 
-.lessBold { 
+.lessBold, .itemTitle { 
     font-weight: 500;
+}
+
+.itemTitle { 
+    font-size: 1.4em;
 }
 
 .items { 
@@ -24,11 +26,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 300px;
+    max-width: 370px;
     gap: 25px;
 }
 
 .itemImage {
-    width: 150px;
+    width: 120px;
     aspect-ratio: 1;
     object-fit: contain;
 }
@@ -43,4 +47,14 @@
 .itemControlsQuantity input {
     width: 75px;
     height: 35px; 
+}
+
+.checkout { 
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    font-size: 1.2em;
 }

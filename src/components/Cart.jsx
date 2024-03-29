@@ -14,6 +14,8 @@ const CartEmpty = () => {
 };
 
 const CartItems = ({ items, setCart }) => {
+    const totalCost = items.reduce((total, item) => total + item.price, 0).toFixed(2);
+
     const decrementQuantity = item => {
         if (item.quantity > 0) {
             item.quantity--;
@@ -44,27 +46,34 @@ const CartItems = ({ items, setCart }) => {
     };
 
     return (
-        <div className={styles.items}>
-            {items.map(curItem => (
-                <div className={styles.item} key={curItem.title}>
-                    <img className={styles.itemImage} src={curItem.image} alt="" />
-                    <div className={itemStyles.itemInfo}>
-                        <h2 className="itemTitle">{curItem.title}</h2>
-                        <p className={itemStyles.itemPrice}>${(curItem.price * curItem.quantity).toFixed(2)}</p>
+        <>
+            <div className={styles.items}>
+                {items.map(curItem => (
+                    <div className={styles.item} key={curItem.title}>
+                        <img className={styles.itemImage} src={curItem.image} alt="" />
+                        <div className={itemStyles.itemInfo}>
+                            <h2 className={styles.itemTitle}>{curItem.title}</h2>
+                            <p className={itemStyles.itemPrice}>${(curItem.price * curItem.quantity).toFixed(2)}</p>
 
-                        <div className={styles.itemControls}>
-                            <div className={`${itemStyles.itemControlsQuantity} ${styles.itemControlsQuantity}`}>
-                                <button className={itemStyles.transparentButton} onClick={() => { decrementQuantity(curItem) }}>-</button>
-                                <input type="number" className={styles.itemQuantityInput} value={curItem.quantity} onChange={event => { updateQuantity(event, curItem) }} />
-                                <button className={itemStyles.transparentButton} onClick={() => { incrementQuantity(curItem) }}>+</button>
+                            <div className={styles.itemControls}>
+                                <div className={`${itemStyles.itemControlsQuantity} ${styles.itemControlsQuantity}`}>
+                                    <button className={itemStyles.transparentButton} onClick={() => { decrementQuantity(curItem) }}>-</button>
+                                    <input type="number" className={styles.itemQuantityInput} value={curItem.quantity} onChange={event => { updateQuantity(event, curItem) }} />
+                                    <button className={itemStyles.transparentButton} onClick={() => { incrementQuantity(curItem) }}>+</button>
+                                </div>
+
+                                <button className="standardButton" onClick={() => { removeItem(curItem) }}>Remove</button>
                             </div>
-
-                            <button className="standardButton" onClick={() => { removeItem(curItem) }}>Remove</button>
                         </div>
-                    </div>
-                </div >
-            ))}
-        </div>
+                    </div >
+                ))}
+            </div>
+
+            <div className={styles.checkout}>
+                <h2>Total: ${totalCost}</h2>
+                <button className="standardButton">Checkout</button>
+            </div>
+        </>
     )
 };
 
