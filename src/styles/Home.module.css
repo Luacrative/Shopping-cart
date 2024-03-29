@@ -28,10 +28,6 @@
     flex-direction: column;
 }
 
-.featured h1 {
-    text-transform: uppercase;
-}
-
 .items {
     display: grid;
     margin: 50px;

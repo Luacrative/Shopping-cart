@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
 import styles from "../styles/Item.module.css"
-import "../styles/App.css"
 
 const Item = ({ curItem, setCart }) => {
     const [quantity, setQuantity] = useState(0);
@@ -58,4 +57,4 @@ const Item = ({ curItem, setCart }) => {
     )
 };
 
-export default Item; 
+export default Item

@@ -1,0 +1,46 @@
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    position: absolute;
+    margin-top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.lessBold { 
+    font-weight: 500;
+}
+
+.items { 
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.itemImage {
+    width: 150px;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+
+.itemControls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.itemControlsQuantity input {
+    width: 75px;
+    height: 35px; 
+}

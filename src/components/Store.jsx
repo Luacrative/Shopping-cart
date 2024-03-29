@@ -24,4 +24,4 @@ const Store = ({ setCurItem }) => {
     )
 };
 
-export default Store; 
+export default Store
