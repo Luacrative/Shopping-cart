@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { useState } from "react"
 import styles from "../styles/Item.module.css"
 import "../styles/App.css"
@@ -34,7 +35,9 @@ const Item = ({ curItem }) => {
                     </div>
 
                     <button className="standardButton">Add to cart</button>
-                    <button className={styles.transparentButton}>Back</button>
+                    <Link to="/">
+                        <button className={styles.transparentButton}>Back</button>
+                    </Link>
                 </div>
             </div>
         </main >

@@ -9,6 +9,7 @@ body {
 
 a { 
     all: unset;
+    text-align: center;
 }
 
 a:hover { 
