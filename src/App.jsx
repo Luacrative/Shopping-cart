@@ -8,7 +8,7 @@ import "./styles/App.css"
 
 function App() {
     const [curItem, setCurItem] = useState({});
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState({});
 
     return (
         <>
@@ -17,7 +17,7 @@ function App() {
                 <Routes>
                     <Route exact path="/" element={<Home setCurItem={setCurItem} />} />
                     <Route path="/store" element={<Store setCurItem={setCurItem} />} />
-                    <Route path="/item" element={<Item curItem={curItem} />} />
+                    <Route path="/item" element={<Item curItem={curItem} setCart={setCart} />} />
                 </Routes>
             </Router>
         </>

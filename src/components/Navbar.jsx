@@ -6,6 +6,7 @@ import searchImage from "../assets/search.png"
 const Navbar = ({ cart }) => {
     const location = useLocation();
     const background = location.pathname === "/" ? styles.transparentBar : styles.opaqueBar;
+    const cartItems = Object.keys(cart).length;
 
     return (
         <nav className={`${styles.bar} ${background}`}>
@@ -18,8 +19,8 @@ const Navbar = ({ cart }) => {
                 <img className={styles.icon} src={searchImage} />
                 <div className={styles.cart}>
                     <img className={styles.icon} src={cartImage} />
-                    {cart.length > 0 &&
-                        <p className={styles.cartQuantity}>{cart.length}</p>
+                    {cartItems > 0 &&
+                        <p className={styles.cartQuantity}>{cartItems}</p>
                     }
                 </div>
             </div>
